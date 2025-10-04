@@ -59,7 +59,7 @@ footer{padding:28px 0;color:var(--muted);font-size:14px}
 /* Móvil: apilar la sección 'sobre-mi' y garantizar el orden (sobre mí primero, datos rápidos después).
    Se usa !important para sobreescribir el estilo inline presente en el HTML.
 */
-@media (max-width:700px){
+@media (max-width:500px){
   #sobre-mi > div {
     display: grid !important;
     grid-template-columns: 1fr !important;
@@ -70,5 +70,28 @@ footer{padding:28px 0;color:var(--muted);font-size:14px}
   /* Asegurar que la tarjeta ocupe el 100% del ancho cuando se apilen */
   #sobre-mi .card {
     width: 100% !important;
+  }
+
+  /* Ajustes para la imagen de portrait en móvil */
+  .hero .portrait {
+    width: 40% !important; /* hacer el contenedor algo más estrecho que el 100% */
+    height: 240px !important; /* altura reducida para equilibrar con el scale */
+    margin: 0 auto 18px !important; /* centrar y separar del contenido */
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 24px rgba(18,28,25,0.06) !important;
+    display: block !important;
+    max-width: 420px !important;
+  }
+
+  .hero .portrait img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 45% !important; /* foco más bajo */
+    display: block !important;
+    transform: scale(0.92) !important; /* reducir visualmente la imagen */
+    transform-origin: center center !important;
+    transition: transform 220ms ease !important;
   }
 }
