@@ -1,126 +1,365 @@
-:root{
-  --bg:#fbfbf9;
-  --muted:#9aa6a3;
-  --accent:#0f5b4f; /* verde oscuro */
-  --accent-2:#144e44;
-  --card:#ffffff;
-  --radius:14px;
-  --container:1100px;
+:root {
+  --bg: #fbfbf9;
+  --muted: #9aa6a3;
+  --accent: #0f5b4f;
+  /* verde oscuro */
+  --accent-2: #144e44;
+  --card: #ffffff;
+  --radius: 14px;
+  --container: 1100px;
 }
 
 /* Botón WhatsApp */
-.btn-whatsapp{
-  display:inline-block;
-  background:linear-gradient(180deg,#22c55e,#16a34a);
-  color:white;
-  padding:10px 14px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:700;
-  box-shadow:0 6px 18px rgba(16,185,129,0.18);
+.btn-whatsapp {
+  display: inline-block;
+  background: linear-gradient(180deg, #22c55e, #16a34a);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.18);
 }
-.btn-whatsapp:hover{filter:brightness(0.95)}
 
-@media (max-width:500px){
-  .btn-whatsapp{padding:10px 12px;font-size:14px}
+.btn-whatsapp:hover {
+  filter: brightness(0.95)
 }
+
+@media (max-width:500px) {
+  .btn-whatsapp {
+    padding: 10px 12px;
+    font-size: 14px
+  }
+}
+
 /* Widget fijo de WhatsApp (centrado abajo) */
-.wh-widget{
-  position:fixed;
-  left:50%;
-  transform:translateX(-50%);
-  bottom:22px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:8px;
-  z-index:9999;
+.wh-widget {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 9999;
 }
-.wh-widget__text{
-  background:rgba(255,255,255,0.98);
-  padding:6px 10px;
-  border-radius:10px;
-  font-size:13px;
-  color:var(--muted);
-  box-shadow:0 6px 18px rgba(10,20,18,0.06);
-}
-.wh-widget__btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:56px;
-  height:56px;
-  border-radius:999px;
-  background:linear-gradient(180deg,#22c55e,#16a34a);
-  box-shadow:0 10px 30px rgba(16,185,129,0.18);
-  text-decoration:none;
-  transition:transform 160ms ease, box-shadow 160ms ease;
-}
-.wh-widget__btn svg{display:block}
-.wh-widget__btn:active{transform:scale(0.96)}
 
-@media (min-width:900px){
-  .wh-widget__text{display:block}
+.wh-widget__text {
+  background: rgba(255, 255, 255, 0.98);
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  box-shadow: 0 6px 18px rgba(10, 20, 18, 0.06);
 }
-@media (max-width:420px){
-  .wh-widget{bottom:14px}
-  .wh-widget__text{font-size:12px;padding:5px 8px}
-  .wh-widget__btn{width:48px;height:48px}
+
+.wh-widget__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #22c55e, #16a34a);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.18);
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue';background:var(--bg);color:#0b0b0b}
+
+.wh-widget__btn svg {
+  display: block
+}
+
+.wh-widget__btn:active {
+  transform: scale(0.96)
+}
+
+@media (min-width:900px) {
+  .wh-widget__text {
+    display: block
+  }
+}
+
+@media (max-width:420px) {
+  .wh-widget {
+    bottom: 14px
+  }
+
+  .wh-widget__text {
+    font-size: 12px;
+    padding: 5px 8px
+  }
+
+  .wh-widget__btn {
+    width: 48px;
+    height: 48px
+  }
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue';
+  background: var(--bg);
+  color: #0b0b0b
+}
 
 /* layout */
-.container{max-width:var(--container);margin:0 auto;padding:32px}
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 32px
+}
 
-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.brand{display:flex;align-items:center;gap:16px}
-.logo-circle{width:48px;height:48px;border-radius:10px;background:linear-gradient(180deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-family:Playfair Display}
-.brand h1{margin:0;font-family:'Playfair Display', serif;font-size:20px;color:var(--accent-2);letter-spacing:0.2px}
-.brand p{margin:0;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0
+}
 
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
-nav a{color:#0b0b0b;text-decoration:none;font-weight:600}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px
+}
+
+.logo-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-family: Playfair Display
+}
+
+.brand h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--accent-2);
+  letter-spacing: 0.2px
+}
+
+.brand p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px
+}
+
+nav ul {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+nav a {
+  color: #0b0b0b;
+  text-decoration: none;
+  font-weight: 600
+}
 
 /* hero */
-.hero{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;padding:40px 0}
-.hero h2{font-family:'Playfair Display';font-size:48px;line-height:1.02;color:var(--accent-2);margin:0}
-.hero p.lead{margin-top:18px;color:#243232;max-width:56ch;font-size:16px}
-.cta-row{margin-top:24px;display:flex;gap:12px;align-items:center}
-.btn-primary{background:var(--accent-2);color:white;padding:12px 18px;border-radius:12px;border:0;font-weight:600;cursor:pointer}
-.btn-ghost{background:transparent;color:var(--accent-2);padding:12px;border-radius:12px;border:1px solid rgba(15,91,79,0.12);cursor:pointer}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 40px;
+  align-items: center;
+  padding: 40px 0
+}
 
-.portrait{width:100%;border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(18,28,25,0.06);background:linear-gradient(180deg,#fff,#f6f8f7);display:flex;align-items:center;justify-content:center}
-.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.hero h2 {
+  font-family: 'Playfair Display';
+  font-size: 48px;
+  line-height: 1.02;
+  color: var(--accent-2);
+  margin: 0
+}
+
+.hero p.lead {
+  margin-top: 18px;
+  color: #243232;
+  max-width: 56ch;
+  font-size: 16px
+}
+
+.cta-row {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  align-items: center
+}
+
+.btn-primary {
+  background: var(--accent-2);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--accent-2);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 91, 79, 0.12);
+  cursor: pointer
+}
+
+.portrait {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(18, 28, 25, 0.06);
+  background: linear-gradient(180deg, #fff, #f6f8f7);
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block
+}
 
 /* sections */
-section{padding:48px 0;border-top:1px solid rgba(0,0,0,0.03)}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 20px rgba(10,20,18,0.03)}
+section {
+  padding: 48px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.03)
+}
 
-h3{font-family:'Playfair Display';color:var(--accent-2);margin:0 0 12px 0}
-p{margin:0;color:#2b3a39}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(10, 20, 18, 0.03)
+}
+
+h3 {
+  font-family: 'Playfair Display';
+  color: var(--accent-2);
+  margin: 0 0 12px 0
+}
+
+p {
+  margin: 0;
+  color: #2b3a39;
+  text-align: justify;
+}
 
 /* contact */
-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-input,textarea{padding:12px;border-radius:10px;border:1px solid #e6e6e6;font-size:14px}
-textarea{grid-column:1 / -1;min-height:120px}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px
+}
 
-footer{padding:28px 0;color:var(--muted);font-size:14px}
+input,
+textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+  font-size: 14px
+}
+
+textarea {
+  grid-column: 1 / -1;
+  min-height: 120px
+}
+
+footer {
+  padding: 28px 0;
+  color: var(--muted);
+  font-size: 14px
+}
+
+.banana-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.banana-link:hover {
+  color: #25d366;
+  /* Color verde de WhatsApp */
+}
 
 /* responsive */
-@media (max-width:900px){
-  .hero{grid-template-columns:1fr;}
-  .portrait{order:-1;height:320px}
-  .grid-3{grid-template-columns:1fr}
-  form{grid-template-columns:1fr}
+@media (max-width:900px) {
+  .container {
+    padding: 20px
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .portrait {
+    order: -1;
+    height: 320px
+  }
+
+  .cta-row {
+    justify-content: center;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr
+  }
+
+  form {
+    grid-template-columns: 1fr
+  }
+
+  header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+  }
 }
 
 /* Móvil: apilar la sección 'sobre-mi' y garantizar el orden (sobre mí primero, datos rápidos después).
    Se usa !important para sobreescribir el estilo inline presente en el HTML.
 */
-@media (max-width:500px){
-  #sobre-mi > div {
+@media (max-width:500px) {
+  #sobre-mi>div {
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 18px !important;
@@ -134,23 +373,41 @@ footer{padding:28px 0;color:var(--muted);font-size:14px}
 
   /* Ajustes para la imagen de portrait en móvil */
   .hero .portrait {
-    width: 40% !important; /* hacer el contenedor algo más estrecho que el 100% */
-    height: 240px !important; /* altura reducida para equilibrar con el scale */
-    margin: 0 auto 18px !important; /* centrar y separar del contenido */
+    width: 80% !important;
+    /* Ampliado para mejor visibilidad */
+    height: 300px !important;
+    /* Altura ajustada */
+    max-width: 320px !important;
+    margin: 0 auto 18px !important;
     border-radius: 12px !important;
     overflow: hidden !important;
-    box-shadow: 0 8px 24px rgba(18,28,25,0.06) !important;
+    box-shadow: 0 8px 24px rgba(18, 28, 25, 0.06) !important;
     display: block !important;
-    max-width: 420px !important;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .cta-row button {
+    width: 100%;
+  }
+
+  .hero h2 {
+    font-size: 32px;
   }
 
   .hero .portrait img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    object-position: center 45% !important; /* foco más bajo */
+    object-position: center 45% !important;
+    /* foco más bajo */
     display: block !important;
-    transform: scale(0.92) !important; /* reducir visualmente la imagen */
+    transform: scale(0.92) !important;
+    /* reducir visualmente la imagen */
     transform-origin: center center !important;
     transition: transform 220ms ease !important;
   }
