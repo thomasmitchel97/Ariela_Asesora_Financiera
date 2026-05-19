@@ -67,9 +67,22 @@
           </div>
         </div>
 
-        <aside class="portrait">
-          <!-- Reemplaza src por la foto profesional de Ariela -->
-          <img src="ariela 1.jpg" alt="Portrait profesional de Ariela Vargas" />
+        <aside class="hero-media">
+          <div class="portrait">
+            <!-- Reemplaza src por la foto profesional de Ariela -->
+            <img src="ariela 1.jpg" alt="Portrait profesional de Ariela Vargas" />
+          </div>
+
+          <section id="nissan-morelos" class="notice-banner" aria-labelledby="nissan-morelos-title">
+            <div class="notice-banner__content">
+              <span class="notice-banner__tag">Aviso para extrabajadores de Nissan en Morelos</span>
+              <h3 id="nissan-morelos-title">¿Tienes más de 46 días naturales sin empleo?</h3>
+              <p>Podrías acceder a tu pensión o recursos de tu AFORE. Te ayudo a revisar opciones, requisitos y documentos sin costo.</p>
+            </div>
+            <a class="btn-primary notice-banner__action"
+              href="https://wa.me/527771320779?text=Hola%20Ariela,%20trabaj%C3%A9%20en%20Nissan%20Morelos%20y%20quiero%20revisar%20si%20ya%20puedo%20iniciar%20mi%20tr%C3%A1mite%20de%20pensi%C3%B3n%20o%20AFORE"
+              target="_blank" rel="noopener noreferrer">Revisar mi caso</a>
+          </section>
         </aside>
       </section>
 
@@ -153,33 +166,34 @@
         </div>
       </section>
 
-<section id="simulador">
-  <h3 style="margin-bottom:18px">Simulador de inversión</h3>
+      <section id="simulador">
+        <details class="simulator-accordion">
+          <summary>
+            <span>
+              <strong>Simulador de inversión</strong>
+              <small>Calcula un escenario de ahorro cuando lo necesites.</small>
+            </span>
+          </summary>
 
-  <div class="card">
-    <div class="sim-grid">
-      <input type="number" id="monto" placeholder="Monto inicial ($)">
-      <input type="number" id="aporte" placeholder="Aporte mensual ($)">
-      <input type="number" id="tasa" placeholder="Tasa anual (%)">
-      <input type="number" id="plazo" placeholder="Plazo (años)">
-    </div>
+          <div class="simulator-accordion__body">
+            <div class="card">
+              <div class="sim-grid">
+                <input type="number" id="monto" placeholder="Monto inicial ($)">
+                <input type="number" id="aporte" placeholder="Aporte mensual ($)">
+                <input type="number" id="tasa" placeholder="Tasa anual (%)">
+                <input type="number" id="plazo" placeholder="Plazo (años)">
+              </div>
 
-    <div class="cta-row" style="margin-top:16px">
-      <button class="btn-primary" id="calcular">Calcular</button>
-    </div>
+              <div class="cta-row" style="margin-top:16px">
+                <button class="btn-primary" id="calcular">Calcular</button>
+              </div>
 
-    <div id="resultado" style="margin-top:20px;color:var(--accent-2);font-weight:600"></div>
-  </div>
-<canvas id="grafica" style="margin-top:20px; width:100%; max-height:300px;"></canvas>
-
-</section>
-
-
-<div style="margin-top:16px">
-  <button class="btn-ghost" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
-    Recibir asesoría personalizada
-  </button>
-</div>
+              <div id="resultado" style="margin-top:20px;color:var(--accent-2);font-weight:600"></div>
+            </div>
+            <canvas id="grafica" style="margin-top:20px; width:100%; max-height:300px;"></canvas>
+          </div>
+        </details>
+      </section>
 
 
       <section id="contacto">
