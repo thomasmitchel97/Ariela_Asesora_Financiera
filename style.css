@@ -431,6 +431,44 @@ section {
   padding: 0 20px 20px;
 }
 
+.location-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(320px, 1.2fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.location-address {
+  max-width: 34ch;
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.location-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  text-decoration: none;
+}
+
+.map-frame {
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 91, 79, 0.12);
+  background: var(--card);
+  box-shadow: 0 6px 20px rgba(10, 20, 18, 0.03);
+}
+
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+
 h3 {
   font-family: 'Playfair Display';
   color: var(--accent-2);
@@ -507,6 +545,15 @@ footer {
 
   .grid-3 {
     grid-template-columns: 1fr
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-address {
+    max-width: none;
+    text-align: center;
   }
 
   .notice-banner {
